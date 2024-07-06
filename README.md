@@ -15,7 +15,7 @@ During the installation, you'll be prompted to execute the recipe:
     [p] Yes permanently, never ask again for this project
     (defaults to n): y     
 
-Type y and press Enter to proceed.
+Type ```y``` and press Enter to proceed.
 
 # Configuration
 
