@@ -1,4 +1,4 @@
-# SymfonyBase64VichUploader
+# Symfony Base64 VichUploader
 
 This bundle integrates VichUploaderBundle with Symfony, enabling file uploads using Base64 encoding.
 
