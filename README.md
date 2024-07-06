@@ -109,12 +109,12 @@ class Base64FileExtractor
     }
 
 }
-
-ExtensionBase64
+```
+# ExtensionBase64
 Extracts the file extension from a Base64 encoded string.
 
 // api/src/Utils/ExtensionBase64.php
-
+````
 <?php
 declare(strict_types=1);
 
