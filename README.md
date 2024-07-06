@@ -4,7 +4,7 @@ This bundle integrates VichUploaderBundle with Symfony, enabling file uploads us
 
 # Install the bundle with the help of Composer:
 
-docker compose exec php composer require vich/uploader-bundle
+```docker compose exec php composer require vich/uploader-bundle```
 
 During the installation, you'll be prompted to execute the recipe:
 
@@ -17,7 +17,7 @@ During the installation, you'll be prompted to execute the recipe:
 
 Type y and press Enter to proceed.
 
-Configuration
+# Configuration
 
 Configure the bundle in config/packages/vich_uploader.yaml:
 
@@ -32,10 +32,11 @@ Configure the bundle in config/packages/vich_uploader.yaml:
                # Will rename uploaded files using a uniqueid as a prefix.
                namer: Vich\UploaderBundle\Naming\OrignameNamer  
 
-Serializer
+# Serializer
 
 Create a custom serializer for MediaObject in api/src/Serializer/MediaObjectNormalizer.php:
 
+```
 <?php
 
 declare(strict_types=1);
@@ -80,18 +81,20 @@ final class MediaObjectNormalizer implements ContextAwareNormalizerInterface, No
         return $data instanceof MediaObject;
     }
 }
+```
 
 
+# Utils
 
-Utils
+# Utility classes for handling Base64 files:
 
-Utility classes for handling Base64 files:
+# Base64FileExtractor
 
-Base64FileExtractor
 Extracts the Base64 string from a Base64 encoded content.
 
 // api/src/Utils/Base64FileExtractor.php
 
+```
 <?php
 declare(strict_types=1);
 
@@ -126,12 +129,12 @@ abstract class ExtensionBase64
         return ".$match[1]";
     }
 }
-
-ProcessFile
+```
+# ProcessFile
 Processes the Base64 file and sets it on the MediaObject.
 
 // api/src/Utils/ProcessFile.php
-
+````
 <?php
 declare(strict_types=1);
 
@@ -150,12 +153,13 @@ class ProcessFile extends ExtensionBase64
         $mediaObject->setFile($imageFile);
     }
 }
+````
+# UploadedBase64File
 
-UploadedBase64File
 Represents a file uploaded via Base64 encoding.
 
 // api/src/Utils/UploadedBase64File.php
-
+````
 <?php
 
 declare(strict_types=1);
@@ -177,11 +181,11 @@ class UploadedBase64File extends UploadedFile
         parent::__construct($filePath, $originalName, $mimeType, $error, true);
     }
 }
-
-Entity
+````
+# Entity
 
 Define the MediaObject entity in api/src/Entity/MediaObject.php:
-
+````
 <?php
 
 namespace App\Entity;
@@ -262,7 +266,7 @@ class MediaObject
     }
 
 }
-
+````
 This documentation provides a step-by-step guide to setting up the SymfonyBase64VichUploader bundle, including installation, configuration, custom serialization, utility classes, and the MediaObject entity.
 
                
