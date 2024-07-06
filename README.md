@@ -135,6 +135,7 @@ Processes the Base64 file and sets it on the MediaObject.
 
 // api/src/Utils/ProcessFile.php
 ````
+````
 <?php
 declare(strict_types=1);
 
