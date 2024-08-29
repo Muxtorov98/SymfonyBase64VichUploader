@@ -7,7 +7,7 @@ This bundle integrates VichUploaderBundle with Symfony, enabling file uploads us
 ```docker compose exec php composer require vich/uploader-bundle```
 
 During the installation, you'll be prompted to execute the recipe:
-```cmd
+```bash
     Do you want to execute this recipe?
     [y] Yes
     [n] No
