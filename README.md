@@ -36,7 +36,7 @@ Configure the bundle in config/packages/vich_uploader.yaml:
 
 Create a custom serializer for MediaObject in api/src/Serializer/MediaObjectNormalizer.php:
 
-```
+```php
 <?php
 
 declare(strict_types=1);
@@ -94,7 +94,7 @@ Extracts the Base64 string from a Base64 encoded content.
 
 // api/src/Utils/Base64FileExtractor.php
 
-```
+```php
 <?php
 declare(strict_types=1);
 
@@ -114,7 +114,7 @@ class Base64FileExtractor
 Extracts the file extension from a Base64 encoded string.
 
 // api/src/Utils/ExtensionBase64.php
-````
+````php
 <?php
 declare(strict_types=1);
 
@@ -135,7 +135,7 @@ Processes the Base64 file and sets it on the MediaObject.
 
 // api/src/Utils/ProcessFile.php
 
-````
+````php
 <?php
 declare(strict_types=1);
 
@@ -160,7 +160,7 @@ class ProcessFile extends ExtensionBase64
 Represents a file uploaded via Base64 encoding.
 
 // api/src/Utils/UploadedBase64File.php
-````
+````php
 <?php
 
 declare(strict_types=1);
@@ -189,7 +189,7 @@ class UploadedBase64File extends UploadedFile
 Create a controller for handling Base64 media uploads in 
 
 api/src/Controller/Media/CreateMediaBase64Action.php
-````
+````php
 <?php
 
 declare(strict_types=1);
@@ -215,7 +215,7 @@ class CreateMediaBase64Action extends AbstractController
 # Entity
 
 Define the MediaObject entity in api/src/Entity/MediaObject.php:
-````
+````php
 <?php
 
 namespace App\Entity;
