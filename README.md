@@ -20,7 +20,7 @@ Type ```y``` and press Enter to proceed.
 # Configuration
 
 Configure the bundle in config/packages/vich_uploader.yaml:
-
+```yaml
     vich_uploader:
         db_driver: orm
         metadata:
@@ -31,7 +31,7 @@ Configure the bundle in config/packages/vich_uploader.yaml:
                upload_destination: '%kernel.project_dir%/public/media'
                # Will rename uploaded files using a uniqueid as a prefix.
                namer: Vich\UploaderBundle\Naming\OrignameNamer  
-
+```
 # Serializer
 
 Create a custom serializer for MediaObject in api/src/Serializer/MediaObjectNormalizer.php:
